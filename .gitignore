@@ -1,0 +1,11 @@
+# Operating system files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Local editor settings
+.vscode/
+
+# Temporary output
+*.log
+*.tmp

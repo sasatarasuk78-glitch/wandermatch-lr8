@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Знайдіть напрямок, який пасує вашому стилю подорожей, і дослідіть його у 360° ще до поїздки."
+    />
+    <title>WanderMatch — подорож, що пасує саме вам</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти до основного вмісту</a>
+
+    <header class="site-header bg-[#eff9fb]/90 shadow-sm backdrop-blur-md">
+      <div class="mx-auto flex min-h-[5.5rem] w-full max-w-[1200px] items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+        <a class="brand flex shrink-0 items-center gap-2" href="#top" aria-label="WanderMatch — на головну">
+          <span class="brand__mark" aria-hidden="true">
+            <img src="assets/images/wander-match-logo.jpg" alt="" />
+          </span>
+          <span class="brand__name">Wander<span>Match</span></span>
+        </a>
+
+        <button class="inline-flex min-h-10 items-center gap-2 rounded-full border border-slate-300 bg-white px-4 text-sm font-bold text-slate-800 shadow-sm transition hover:border-teal-500 hover:text-teal-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-500 md:hidden" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+          <span>Меню</span>
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+
+        <nav class="primary-nav absolute left-4 right-4 top-[calc(100%-0.25rem)] z-50 hidden rounded-2xl border border-slate-200 bg-white p-3 text-sm font-semibold text-slate-800 shadow-xl md:static md:block md:w-auto md:border-0 md:bg-transparent md:p-0 md:shadow-none" id="primary-navigation" aria-label="Головна навігація">
+          <ul class="m-0 flex list-none flex-col gap-1 p-0 md:flex-row md:items-center md:gap-6">
+            <li>
+              <details class="group relative">
+                <summary class="flex cursor-pointer list-none items-center gap-2 rounded-lg px-3 py-2 transition hover:text-teal-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-600">Напрямки <span class="text-xs transition group-open:rotate-180" aria-hidden="true">⌄</span></summary>
+                <div class="hidden rounded-xl bg-white p-2 shadow-lg ring-1 ring-slate-200 group-hover:block group-open:block md:absolute md:left-0 md:top-full md:mt-2 md:min-w-52">
+                  <a class="block rounded-lg px-3 py-2 transition hover:bg-cyan-50 hover:text-teal-700" href="#destinations">Популярні напрямки</a>
+                  <a class="block rounded-lg px-3 py-2 transition hover:bg-cyan-50 hover:text-teal-700" href="#explore">Відео, карта й погода</a>
+                  <a class="block rounded-lg px-3 py-2 transition hover:bg-cyan-50 hover:text-teal-700" href="#start">Підібрати маршрут</a>
+                </div>
+              </details>
+            </li>
+            <li><a class="block rounded-lg px-3 py-2 transition hover:text-teal-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-600" href="#how-it-works">Як це працює</a></li>
+            <li><a class="block rounded-lg px-3 py-2 transition hover:text-teal-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-600" href="#why-wandermatch">Переваги</a></li>
+            <li><a class="inline-flex min-h-[2.85rem] items-center justify-center rounded-full bg-[#18283e] px-5 py-3 text-sm font-bold leading-none text-white transition hover:-translate-y-0.5 hover:bg-[#183d78] hover:shadow-[0_8px_28px_rgba(24,61,120,0.06)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 md:ml-1" href="#start">Пройти тест</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <p class="eyebrow">Індивідуальний підбір маршруту</p>
+          <h1 class="mb-6 max-w-[11ch] font-extrabold leading-[1.12] tracking-[-0.04em] text-[clamp(2.75rem,6vw,5.75rem)]" id="hero-title">Твоя ідеальна подорож починається тут</h1>
+          <p class="hero__description">
+            Дозволь штучному інтелекту підібрати напрямок під твій стиль, бюджет і темп.
+            Досліджуй майбутню подорож у 360° ще до вибору.
+          </p>
+          <div class="hero__actions">
+            <a class="inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#18283e] px-8 py-4 font-bold leading-none text-white transition hover:-translate-y-0.5 hover:bg-[#183d78] hover:shadow-[0_8px_28px_rgba(24,61,120,0.06)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500" href="#start">Пройти тест <span aria-hidden="true">↗</span></a>
+            <a class="inline-flex min-h-14 items-center justify-center rounded-full border border-[#18283e]/20 bg-white/60 px-8 py-4 font-bold leading-none text-[#18283e] transition hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_8px_28px_rgba(24,61,120,0.06)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500" href="#destinations">Переглянути напрямки</a>
+          </div>
+          <div class="hero__proof" role="group" aria-label="Переваги сервісу">
+            <span><span class="proof-dot" aria-hidden="true"></span> Персональні збіги</span>
+            <span><span class="proof-dot" aria-hidden="true"></span> Перегляд у 360°</span>
+          </div>
+        </div>
+        <a class="hero__scroll" href="#destinations" aria-label="Прокрутити до напрямків">
+          <span aria-hidden="true">↓</span>
+        </a>
+      </section>
+
+      <section class="destinations py-[clamp(4.5rem,8vw,7.5rem)]" id="destinations" aria-labelledby="destinations-title">
+        <div class="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p class="eyebrow">Ідеї для наступної мандрівки</p>
+              <h2 class="mb-4 font-extrabold leading-[1.12] tracking-[-0.04em] text-[clamp(2rem,4vw,3.5rem)]" id="destinations-title">Популярні напрямки</h2>
+            </div>
+            <a class="inline-flex items-center gap-2 font-bold text-[#183d78] transition hover:text-[#15b7bd]" href="#start">Знайти свій збіг <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <div class="destination-grid grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="destination-card destination-card--kyoto flex min-w-0 flex-col overflow-hidden rounded-2xl border border-[#d9e8eb] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div class="destination-card__visual relative grid min-h-40 place-items-center overflow-hidden text-3xl font-extrabold tracking-wide text-white" role="img" aria-label="Стилізована кольорова ілюстрація Кіото"><span>京</span></div>
+              <div class="flex flex-1 flex-col gap-3 p-5">
+                <div class="flex items-start justify-between gap-3"><div><p class="mb-1 text-xs text-slate-500">Японія</p><h3 class="m-0 text-xl font-bold leading-tight tracking-[-0.04em] text-slate-900">Кіото</h3></div><span class="shrink-0 rounded-full bg-[#e7f8fb] px-3 py-1 text-xs font-bold text-[#183d78]">Культура</span></div>
+                <p class="m-0 text-sm leading-6 text-slate-600">Храмові стежки, чайні квартали й неквапливі прогулянки старим містом.</p>
+                <div class="mt-auto flex items-center justify-between gap-3 border-t border-slate-100 pt-3"><span class="text-sm font-bold text-slate-800">94% збігу</span><span class="text-xs text-slate-500">Бюджет від €1 100*</span></div>
+                <a class="inline-flex min-h-11 items-center justify-center rounded-full bg-[#18283e] px-4 text-sm font-bold text-white transition hover:bg-[#183d78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600" href="#start">Дізнатися більше <span class="ml-2" aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+            <article class="destination-card destination-card--lisbon flex min-w-0 flex-col overflow-hidden rounded-2xl border border-[#d9e8eb] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div class="destination-card__visual relative grid min-h-40 place-items-center overflow-hidden text-3xl font-extrabold tracking-wide text-white" role="img" aria-label="Стилізована кольорова ілюстрація Лісабона"><span>Lisboa</span></div>
+              <div class="flex flex-1 flex-col gap-3 p-5">
+                <div class="flex items-start justify-between gap-3"><div><p class="mb-1 text-xs text-slate-500">Португалія</p><h3 class="m-0 text-xl font-bold leading-tight tracking-[-0.04em] text-slate-900">Лісабон</h3></div><span class="shrink-0 rounded-full bg-[#e7f8fb] px-3 py-1 text-xs font-bold text-[#183d78]">Місто</span></div>
+                <p class="m-0 text-sm leading-6 text-slate-600">Кольорові вулиці, океанський бриз і місцева кухня для повільного відпочинку.</p>
+                <div class="mt-auto flex items-center justify-between gap-3 border-t border-slate-100 pt-3"><span class="text-sm font-bold text-slate-800">91% збігу</span><span class="text-xs text-slate-500">Бюджет від €780*</span></div>
+                <a class="inline-flex min-h-11 items-center justify-center rounded-full bg-[#18283e] px-4 text-sm font-bold text-white transition hover:bg-[#183d78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600" href="#start">Дізнатися більше <span class="ml-2" aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+            <article class="destination-card destination-card--bali flex min-w-0 flex-col overflow-hidden rounded-2xl border border-[#d9e8eb] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div class="destination-card__visual relative grid min-h-40 place-items-center overflow-hidden text-3xl font-extrabold tracking-wide text-white" role="img" aria-label="Стилізована кольорова ілюстрація Балі"><span>Bali</span></div>
+              <div class="flex flex-1 flex-col gap-3 p-5">
+                <div class="flex items-start justify-between gap-3"><div><p class="mb-1 text-xs text-slate-500">Індонезія</p><h3 class="m-0 text-xl font-bold leading-tight tracking-[-0.04em] text-slate-900">Балі</h3></div><span class="shrink-0 rounded-full bg-[#e7f8fb] px-3 py-1 text-xs font-bold text-[#183d78]">Природа</span></div>
+                <p class="m-0 text-sm leading-6 text-slate-600">Тропічні береги, зелені схили й час для відновлення у власному ритмі.</p>
+                <div class="mt-auto flex items-center justify-between gap-3 border-t border-slate-100 pt-3"><span class="text-sm font-bold text-slate-800">89% збігу</span><span class="text-xs text-slate-500">Бюджет від €920*</span></div>
+                <a class="inline-flex min-h-11 items-center justify-center rounded-full bg-[#18283e] px-4 text-sm font-bold text-white transition hover:bg-[#183d78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600" href="#start">Дізнатися більше <span class="ml-2" aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+            <article class="destination-card destination-card--dolomites flex min-w-0 flex-col overflow-hidden rounded-2xl border border-[#d9e8eb] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div class="destination-card__visual relative grid min-h-40 place-items-center overflow-hidden text-3xl font-extrabold tracking-wide text-white" role="img" aria-label="Стилізована кольорова ілюстрація Доломітових Альп"><span>Dolomiti</span></div>
+              <div class="flex flex-1 flex-col gap-3 p-5">
+                <div class="flex items-start justify-between gap-3"><div><p class="mb-1 text-xs text-slate-500">Італія</p><h3 class="m-0 text-xl font-bold leading-tight tracking-[-0.04em] text-slate-900">Доломіти</h3></div><span class="shrink-0 rounded-full bg-[#e7f8fb] px-3 py-1 text-xs font-bold text-[#183d78]">Пригоди</span></div>
+                <p class="m-0 text-sm leading-6 text-slate-600">Гірські маршрути, озера й краєвиди для активної подорожі на природі.</p>
+                <div class="mt-auto flex items-center justify-between gap-3 border-t border-slate-100 pt-3"><span class="text-sm font-bold text-slate-800">86% збігу</span><span class="text-xs text-slate-500">Бюджет від €860*</span></div>
+                <a class="inline-flex min-h-11 items-center justify-center rounded-full bg-[#18283e] px-4 text-sm font-bold text-white transition hover:bg-[#183d78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600" href="#start">Дізнатися більше <span class="ml-2" aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+            <article class="destination-card destination-card--marrakech flex min-w-0 flex-col overflow-hidden rounded-2xl border border-[#d9e8eb] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div class="destination-card__visual relative grid min-h-40 place-items-center overflow-hidden text-3xl font-extrabold tracking-wide text-white" role="img" aria-label="Стилізована кольорова ілюстрація Марракеша"><span>Marrakech</span></div>
+              <div class="flex flex-1 flex-col gap-3 p-5">
+                <div class="flex items-start justify-between gap-3"><div><p class="mb-1 text-xs text-slate-500">Марокко</p><h3 class="m-0 text-xl font-bold leading-tight tracking-[-0.04em] text-slate-900">Марракеш</h3></div><span class="shrink-0 rounded-full bg-[#e7f8fb] px-3 py-1 text-xs font-bold text-[#183d78]">Культура</span></div>
+                <p class="m-0 text-sm leading-6 text-slate-600">Барвисті базари, затишні сади й пряні смаки старого міста.</p>
+                <div class="mt-auto flex items-center justify-between gap-3 border-t border-slate-100 pt-3"><span class="text-sm font-bold text-slate-800">88% збігу</span><span class="text-xs text-slate-500">Бюджет від €690*</span></div>
+                <a class="inline-flex min-h-11 items-center justify-center rounded-full bg-[#18283e] px-4 text-sm font-bold text-white transition hover:bg-[#183d78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600" href="#start">Дізнатися більше <span class="ml-2" aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+            <article class="destination-card destination-card--reykjavik flex min-w-0 flex-col overflow-hidden rounded-2xl border border-[#d9e8eb] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div class="destination-card__visual relative grid min-h-40 place-items-center overflow-hidden text-3xl font-extrabold tracking-wide text-white" role="img" aria-label="Стилізована кольорова ілюстрація Рейк'явіка"><span>Reykjavik</span></div>
+              <div class="flex flex-1 flex-col gap-3 p-5">
+                <div class="flex items-start justify-between gap-3"><div><p class="mb-1 text-xs text-slate-500">Ісландія</p><h3 class="m-0 text-xl font-bold leading-tight tracking-[-0.04em] text-slate-900">Рейк'явік</h3></div><span class="shrink-0 rounded-full bg-[#e7f8fb] px-3 py-1 text-xs font-bold text-[#183d78]">Природа</span></div>
+                <p class="m-0 text-sm leading-6 text-slate-600">Кольорові будинки, гавань і затишні вулички столиці серед північних краєвидів.</p>
+                <div class="mt-auto flex items-center justify-between gap-3 border-t border-slate-100 pt-3"><span class="text-sm font-bold text-slate-800">87% збігу</span><span class="text-xs text-slate-500">Бюджет від €1 350*</span></div>
+                <a class="inline-flex min-h-11 items-center justify-center rounded-full bg-[#18283e] px-4 text-sm font-bold text-white transition hover:bg-[#183d78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600" href="#start">Дізнатися більше <span class="ml-2" aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+          </div>
+          <p class="section-note">* Відсотки сумісності та бюджети наведено як демонстраційні дані. Твій персональний збіг може бути іншим.</p>
+        </div>
+      </section>
+
+      <section class="travel-explorer bg-[#f5fbfc] py-[clamp(4.5rem,8vw,7.5rem)]" id="explore" aria-labelledby="explore-title">
+        <div class="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto mb-12 max-w-3xl text-center">
+            <p class="eyebrow">Медіа-провідник WanderMatch</p>
+            <h2 class="mb-4 font-extrabold leading-[1.12] tracking-[-0.04em] text-[clamp(2rem,4vw,3.5rem)]" id="explore-title">Відчуй Кіото ще до подорожі</h2>
+            <p class="mb-0 text-slate-600">Обери напрямок — і переглянь відео, карту та прогноз погоди саме для цього міста.</p>
+            <div class="mx-auto mt-7 max-w-md text-left">
+              <label class="mb-2 block text-sm font-bold text-[#18283e]" for="destination-select">Популярні напрямки</label>
+              <select class="min-h-12 w-full rounded-xl border border-[#d9e8eb] bg-white px-4 text-base font-semibold text-[#18283e] shadow-sm focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/30" id="destination-select" name="destination">
+                <option value="kyoto">Кіото, Японія</option>
+                <option value="lisbon">Лісабон, Португалія</option>
+                <option value="bali">Балі, Індонезія</option>
+                <option value="dolomites">Доломіти, Італія</option>
+                <option value="marrakech">Марракеш, Марокко</option>
+                <option value="reykjavik">Рейк'явік, Ісландія</option>
+              </select>
+              <p class="mb-0 mt-2 text-xs leading-5 text-slate-500" id="destination-help">Вибір оновить відео, Google Maps і карту погоди Windy.</p>
+            </div>
+            <p class="sr-only" id="destination-status" aria-live="polite">Показано матеріали про Кіото.</p>
+          </div>
+
+          <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+            <!-- Вбудоване відео YouTube змінюється відповідно до вибраного напрямку. -->
+            <article class="overflow-hidden rounded-[1.25rem] border border-[#d9e8eb] bg-white p-5 shadow-[0_8px_28px_rgba(24,61,120,0.06)] sm:p-7 lg:col-span-2" aria-labelledby="destination-video-heading">
+              <div class="mb-5">
+                <p class="eyebrow mb-2">Відеопутівник</p>
+                <h3 class="mb-2 text-2xl font-bold leading-tight tracking-[-0.04em]" id="destination-video-heading">Побач Кіото очима мандрівника</h3>
+                <p class="mb-0 max-w-2xl text-slate-600" id="destination-video-description">Храми, традиційні квартали та знакові місця міста у відеоогляді.</p>
+              </div>
+              <div class="relative aspect-video overflow-hidden rounded-xl bg-[#102b59]" id="destination-video-preview">
+                <img class="h-full w-full object-cover" id="destination-video-thumbnail" src="https://i.ytimg.com/vi/Jd1wzlwtKJ0/maxresdefault.jpg" alt="Обкладинка відеопутівника про Кіото" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+                <span class="absolute inset-0 bg-[#0d2037]/20" aria-hidden="true"></span>
+                <button class="absolute inset-0 grid w-full place-items-center focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-[-4px] focus-visible:outline-teal-300" id="destination-video-play" type="button" aria-label="Відтворити відео про Кіото">
+                  <span class="grid h-16 w-20 place-items-center rounded-2xl bg-[#ff0033] text-white shadow-xl transition group-hover:scale-110">
+                    <svg class="ml-1 h-8 w-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+                  </span>
+                </button>
+                <span class="pointer-events-none absolute bottom-4 left-4 rounded-full bg-[#0d2037]/85 px-4 py-2 text-sm font-bold text-white shadow-lg">Відтворити відео</span>
+              </div>
+              <div class="hidden aspect-video overflow-hidden rounded-xl bg-[#102b59]" id="destination-video-player">
+                <iframe class="h-full w-full border-0" id="destination-video-frame" title="Відеопутівник про Кіото, Японія" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <p class="mb-0 mt-3 text-xs leading-5 text-slate-500">Якщо відео не відтворюється у вбудованому програвачі, <a class="font-semibold text-[#183d78] underline decoration-[#15b7bd] underline-offset-2 hover:text-[#15b7bd]" id="destination-video-link" href="https://www.youtube.com/watch?v=Jd1wzlwtKJ0" target="_blank" rel="noopener noreferrer">відкрий його на YouTube</a>.</p>
+            </article>
+
+            <!-- Вбудована карта Google Maps показує вибране місто. -->
+            <article class="overflow-hidden rounded-[1.25rem] border border-[#d9e8eb] bg-white p-5 shadow-[0_8px_28px_rgba(24,61,120,0.06)] sm:p-7" aria-labelledby="destination-map-heading">
+              <p class="eyebrow mb-2">Інтерактивна карта</p>
+              <h3 class="mb-2 text-2xl font-bold leading-tight tracking-[-0.04em]" id="destination-map-heading">Кіото на мапі</h3>
+              <p class="mb-5 text-slate-600" id="destination-map-description">Оглянь місто та його околиці перед плануванням маршруту.</p>
+              <div class="aspect-[4/3] overflow-hidden rounded-xl bg-[#e7f8fb]">
+                <iframe class="h-full w-full border-0" id="destination-map-frame" src="https://maps.google.com/maps?q=Kyoto%2C%20Japan&z=12&output=embed" title="Google Maps — карта міста Кіото, Японія" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <a class="mt-4 inline-flex items-center gap-2 font-bold text-[#183d78] transition hover:text-[#15b7bd] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600" id="destination-map-link" href="https://www.google.com/maps/search/?api=1&query=Kyoto%2C%20Japan" target="_blank" rel="noopener noreferrer">Відкрити Google Maps <span aria-hidden="true">↗</span></a>
+            </article>
+
+            <!-- Віджет Windy переміщується до координат обраного напрямку. -->
+            <article class="overflow-hidden rounded-[1.25rem] border border-[#d9e8eb] bg-white p-5 shadow-[0_8px_28px_rgba(24,61,120,0.06)] sm:p-7" aria-labelledby="destination-weather-heading">
+              <p class="eyebrow mb-2">Прогноз Windy</p>
+              <h3 class="mb-2 text-2xl font-bold leading-tight tracking-[-0.04em]" id="destination-weather-heading">Погода в Кіото</h3>
+              <p class="mb-5 text-slate-600" id="destination-weather-description">Інтерактивна карта вітру й погодних умов для вибраного напрямку.</p>
+              <div class="aspect-[4/3] overflow-hidden rounded-xl bg-[#e7f8fb]">
+                <iframe class="h-full w-full border-0" id="destination-weather-frame" src="https://embed.windy.com/embed2.html?lat=35.0116&lon=135.7681&detailLat=35.0116&detailLon=135.7681&width=650&height=450&zoom=6&level=surface&overlay=wind&menu=&message=true&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" title="Windy — прогноз погоди для Кіото, Японія" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <a class="mt-4 inline-flex items-center gap-2 font-bold text-[#183d78] transition hover:text-[#15b7bd] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600" id="destination-weather-link" href="https://www.windy.com/?35.012,135.768,6" target="_blank" rel="noopener noreferrer">Відкрити Windy <span aria-hidden="true">↗</span></a>
+              <p class="mb-0 mt-3 text-xs leading-5 text-slate-500">Віджет зберігає логотип Windy та посилання на сервіс.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="how-it-works bg-[#f5fbfc] py-[clamp(4.5rem,8vw,7.5rem)]" id="how-it-works" aria-labelledby="how-title">
+        <div class="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto mb-12 max-w-2xl text-center">
+            <p class="eyebrow">Від бажання до маршруту</p>
+            <h2 class="mb-4 font-extrabold leading-[1.12] tracking-[-0.04em] text-[clamp(2rem,4vw,3.5rem)]" id="how-title">Як це працює</h2>
+              <p class="mt-4 text-slate-600">Три прості кроки — і ти вже ближче до подорожі, яка пасує саме тобі.</p>
+          </div>
+
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="relative min-h-72 rounded-[1.25rem] border border-[#d9e8eb] bg-white p-6 shadow-[0_8px_28px_rgba(24,61,120,0.06)] sm:p-8">
+              <span class="step-card__number">01</span>
+              <span class="icon-tile icon-tile--match" role="img" aria-label="Пошук персонального збігу"></span>
+              <h3 class="mb-2 mt-0 text-xl font-bold leading-tight tracking-[-0.04em]">Розкажи про себе</h3>
+              <p class="mb-0 text-slate-600">Обери стиль відпочинку, бажаний темп, бюджет і враження, які шукаєш.</p>
+            </article>
+            <article class="relative min-h-72 rounded-[1.25rem] border border-[#d9e8eb] bg-white p-6 shadow-[0_8px_28px_rgba(24,61,120,0.06)] sm:p-8">
+              <span class="step-card__number">02</span>
+              <span class="icon-tile icon-tile--view" role="img" aria-label="Перегляд маршруту у 360 градусів"></span>
+              <h3 class="mb-2 mt-0 text-xl font-bold leading-tight tracking-[-0.04em]">Досліди у 360°</h3>
+              <p class="mb-0 text-slate-600">Зазирни в атмосферу місця завдяки імерсивному попередньому перегляду.</p>
+            </article>
+            <article class="relative min-h-72 rounded-[1.25rem] border border-[#d9e8eb] bg-white p-6 shadow-[0_8px_28px_rgba(24,61,120,0.06)] sm:p-8">
+              <span class="step-card__number">03</span>
+              <span class="icon-tile icon-tile--preferences" role="img" aria-label="Налаштування вподобань"></span>
+              <h3 class="mb-2 mt-0 text-xl font-bold leading-tight tracking-[-0.04em]">Знайди свій збіг</h3>
+              <p class="mb-0 text-slate-600">Порівняй рекомендації та зрозумій, чому цей напрямок пасує твоїм планам.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits py-[clamp(4.5rem,8vw,7.5rem)]" id="why-wandermatch" aria-labelledby="benefits-title">
+        <div class="mx-auto grid w-full max-w-[1200px] grid-cols-1 items-center gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(15rem,0.72fr)_minmax(0,1.28fr)] lg:gap-[clamp(3rem,7vw,7rem)] lg:px-8">
+          <div class="benefits__intro">
+            <p class="eyebrow">Менше сумнівів, більше передчуття</p>
+            <h2 class="mb-5 max-w-[15ch] font-extrabold leading-[1.12] tracking-[-0.04em] text-[clamp(2rem,4vw,3.5rem)]" id="benefits-title">Чому WanderMatch?</h2>
+            <p class="text-slate-600">Плануй подорож не за нескінченними списками, а за тим, що справді важливо саме для тебе.</p>
+            <a class="mt-6 inline-flex items-center gap-2 font-bold text-[#183d78] transition hover:text-[#15b7bd]" href="#start">Спробувати підбір <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <article class="min-h-52 rounded-[1.25rem] border border-transparent bg-[#e7f8fb] p-6 shadow-[0_8px_28px_rgba(24,61,120,0.06)]">
+              <span class="benefit-card__index">01 / AI</span>
+              <h3 class="mb-2 mt-6 text-xl font-bold leading-tight tracking-[-0.04em]">Зрозумілі рекомендації</h3>
+              <p class="mb-0 text-slate-600">ШІ пояснює, як твої вподобання пов’язані з кожним запропонованим місцем.</p>
+            </article>
+            <article class="min-h-52 rounded-[1.25rem] border border-[#d9e8eb] bg-white p-6 shadow-[0_8px_28px_rgba(24,61,120,0.06)]">
+              <span class="benefit-card__index">02 / 360°</span>
+              <h3 class="mb-2 mt-6 text-xl font-bold leading-tight tracking-[-0.04em]">Відчуй місце заздалегідь</h3>
+              <p class="mb-0 text-slate-600">Оглянь вулиці, краєвиди й атмосферу напрямку до того, як пакувати валізи.</p>
+            </article>
+            <article class="min-h-40 rounded-[1.25rem] border border-[#d9e8eb] bg-[#effaf7] p-6 shadow-[0_8px_28px_rgba(24,61,120,0.06)] sm:col-span-2">
+              <span class="benefit-card__index">03 / FOR YOU</span>
+              <h3 class="mb-2 mt-6 text-xl font-bold leading-tight tracking-[-0.04em]">Варіанти під твої вподобання</h3>
+              <p class="mb-0 text-slate-600">Культура, природа, гастрономія чи пригоди — рекомендації враховують твій власний ритм.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials bg-[#f5fbfc] py-[clamp(4.5rem,8vw,7.5rem)]" id="testimonials" aria-labelledby="testimonials-title">
+        <div class="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p class="eyebrow">Враження мандрівників</p>
+              <h2 class="mb-4 font-extrabold leading-[1.12] tracking-[-0.04em] text-[clamp(2rem,4vw,3.5rem)]" id="testimonials-title">Різні люди. Різні маршрути.</h2>
+            </div>
+            <p class="max-w-[19rem] text-slate-600">Знайди напрямок, який відповідає твоєму способу подорожувати.</p>
+          </div>
+          <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <article class="rounded-[1.25rem] border border-[#d9e8eb] bg-white p-6 shadow-[0_8px_28px_rgba(24,61,120,0.06)] sm:p-9">
+              <h3 class="sr-only">Відгук Марії К.</h3>
+              <div class="quote-card__stars" role="img" aria-label="5 із 5 зірок">★★★★★</div>
+              <blockquote>«Я шукала поїздку з локальною кухнею та неквапливими прогулянками. Лісабон виявився саме тим, чого хотілося».</blockquote>
+              <div class="quote-card__author"><span class="avatar avatar--one" aria-hidden="true">М</span><span><strong>Марія К.</strong><small>Мандрівниця, любить гастротури</small></span></div>
+            </article>
+            <article class="rounded-[1.25rem] border border-[#d9e8eb] bg-white p-6 shadow-[0_8px_28px_rgba(24,61,120,0.06)] sm:p-9">
+              <h3 class="sr-only">Відгук Андрія П.</h3>
+              <div class="quote-card__stars" role="img" aria-label="5 із 5 зірок">★★★★★</div>
+              <blockquote>«360°-перегляд допоміг уявити місце до бронювання. Тепер я знаю, чого очікувати від своєї наступної пригоди».</blockquote>
+              <div class="quote-card__author"><span class="avatar avatar--two" aria-hidden="true">А</span><span><strong>Андрій П.</strong><small>Мандрівник, шукає пригоди</small></span></div>
+            </article>
+          </div>
+          <p class="demo-note">Приклади відгуків для навчального макета.</p>
+        </div>
+      </section>
+
+      <section class="closing-cta relative overflow-hidden bg-[#102b59] py-[clamp(4.5rem,8vw,7.5rem)] text-center text-white" id="start" aria-labelledby="cta-title">
+        <div class="relative z-10 mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
+          <p class="eyebrow">Наступна подорож починається з тебе</p>
+          <h2 class="mb-4 font-extrabold leading-[1.12] tracking-[-0.04em] text-[clamp(2rem,4vw,3.5rem)]" id="cta-title">Готовий знайти свій напрямок?</h2>
+          <p class="mx-auto mb-7 max-w-[38rem] text-[#d5e6ee]">Кілька відповідей допоможуть відкрити нові місця, які пасують саме твоєму стилю.</p>
+          <a class="inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-white px-8 py-4 font-bold leading-none text-[#18283e] transition hover:-translate-y-0.5 hover:bg-[#e7f8fb] hover:shadow-[0_8px_28px_rgba(0,0,0,0.16)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300" href="#destinations">Переглянути напрямки <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer bg-[#0d2037] py-10 text-slate-200">
+      <div class="mx-auto grid w-full max-w-[1200px] grid-cols-1 gap-8 border-b border-white/15 px-4 pb-8 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
+        <section aria-labelledby="footer-brand-title">
+          <h2 class="sr-only" id="footer-brand-title">WanderMatch</h2>
+          <a class="brand brand--footer flex items-center gap-2" href="#top" aria-label="WanderMatch — на початок сторінки">
+            <span class="brand__mark" aria-hidden="true"><img src="assets/images/wander-match-logo.jpg" alt="" /></span>
+            <span class="brand__name">Wander<span>Match</span></span>
+          </a>
+          <p class="mt-4 max-w-xs text-sm leading-6 text-slate-300">Знаходь напрямки, які пасують твоєму стилю, бюджету й ритму подорожі.</p>
+          <div class="mt-5 flex items-center gap-3" role="group" aria-label="Приклади іконок соціальних мереж">
+            <span class="grid h-10 w-10 place-items-center rounded-full border border-white/20 text-teal-200 transition hover:border-teal-300 hover:bg-white/10" role="img" aria-label="Instagram, демонстраційна іконка">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <span class="grid h-10 w-10 place-items-center rounded-full border border-white/20 text-teal-200 transition hover:border-teal-300 hover:bg-white/10" role="img" aria-label="Facebook, демонстраційна іконка">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.3 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.2V13h2.7v8h3.4Z"/></svg>
+            </span>
+            <span class="grid h-10 w-10 place-items-center rounded-full border border-white/20 text-teal-200 transition hover:border-teal-300 hover:bg-white/10" role="img" aria-label="Pinterest, демонстраційна іконка">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.1 2.5a9.5 9.5 0 0 0-3.5 18.3c0-.8 0-1.8.2-2.7l1.2-5.1s-.3-.6-.3-1.5c0-1.4.8-2.5 1.9-2.5.9 0 1.3.7 1.3 1.5 0 .9-.6 2.3-.9 3.6-.3 1.1.5 2 1.6 2 1.9 0 3.2-2.4 3.2-5.2 0-2.1-1.4-3.7-3.9-3.7-2.9 0-4.7 2.1-4.7 4.5 0 .8.2 1.4.6 1.9.2.2.2.3.1.6l-.2.8c-.1.3-.3.4-.6.3-1.3-.5-1.9-1.8-1.9-3.3 0-2.5 2.1-5.6 6.3-5.6 3.4 0 5.7 2.5 5.7 5.2 0 3.6-2 6.3-5 6.3-1 0-2-.6-2.4-1.2l-.7 2.8c-.2 1-.8 1.9-1.2 2.6A9.5 9.5 0 1 0 12.1 2.5Z"/></svg>
+            </span>
+          </div>
+        </section>
+
+        <nav class="footer-nav flex flex-col items-start gap-3 text-sm" aria-label="Планування подорожі">
+          <h2 class="mb-1 text-base font-bold leading-tight text-white">Плануй подорож</h2>
+          <a class="transition hover:text-teal-300" href="#destinations">Популярні напрямки</a>
+          <a class="transition hover:text-teal-300" href="#explore">Відео, карта й погода</a>
+          <a class="transition hover:text-teal-300" href="#how-it-works">Як це працює</a>
+          <a class="transition hover:text-teal-300" href="#start">Підібрати маршрут</a>
+        </nav>
+
+        <nav class="footer-nav flex flex-col items-start gap-3 text-sm" aria-label="Інформація про сервіс">
+          <h2 class="mb-1 text-base font-bold leading-tight text-white">WanderMatch</h2>
+          <a class="transition hover:text-teal-300" href="#why-wandermatch">Переваги сервісу</a>
+          <a class="transition hover:text-teal-300" href="#testimonials">Враження мандрівників</a>
+          <a class="transition hover:text-teal-300" href="#top">На початок сторінки</a>
+        </nav>
+
+        <section aria-labelledby="newsletter-title">
+          <h2 class="text-base font-bold leading-tight text-white" id="newsletter-title">Натхнення для мандрівок</h2>
+          <p class="mt-2 text-sm leading-6 text-slate-300">Залиш пошту, щоб отримувати ідеї для наступної подорожі.</p>
+          <form class="mt-4 flex flex-col gap-2" id="newsletter-form">
+            <label class="sr-only" for="newsletter-email">Електронна пошта</label>
+            <input class="min-h-11 rounded-xl border border-white/20 bg-white/10 px-3 text-sm text-white placeholder:text-slate-400 focus:border-teal-300 focus:outline-none focus:ring-2 focus:ring-teal-300/40" id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required />
+            <button class="min-h-11 rounded-xl bg-teal-400 px-4 text-sm font-bold text-slate-950 transition hover:bg-teal-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300" type="submit">Підписатися</button>
+            <p class="text-xs text-slate-400" id="newsletter-status" aria-live="polite">Демонстраційна форма; адреса не зберігається й нікуди не надсилається.</p>
+          </form>
+        </section>
+      </div>
+      <div class="mx-auto flex w-full max-w-[1200px] flex-col gap-3 px-4 pt-5 text-xs text-slate-400 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+        <small>© 2026 WanderMatch. Навчальний вебпроєкт.</small>
+        <a class="transition hover:text-teal-300" href="#top">На початок ↑</a>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
