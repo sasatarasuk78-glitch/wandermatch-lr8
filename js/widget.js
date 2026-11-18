@@ -85,7 +85,8 @@
     form.addEventListener('input', update);
     form.addEventListener('change', update);
     form.addEventListener('submit', event => event.preventDefault());
-    form.addEventListener('reset', () => queueMicrotask(update));
+    // Run after the browser has applied the form's native default values.
+    form.addEventListener('reset', () => setTimeout(update, 0));
     update();
     return true;
   }
