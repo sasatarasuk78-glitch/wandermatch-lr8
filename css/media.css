@@ -1,0 +1,25 @@
+.media-container { max-width:1200px; padding:0 24px; margin:auto; }
+.travel-gallery { padding:80px 0; background:#fff; }
+.travel-gallery h2 { font-size:clamp(2rem,4vw,3.5rem); font-weight:800; letter-spacing:-.04em; line-height:1.15; }
+.gallery-intro { color:#52657b; margin:20px 0 32px; max-width:600px; line-height:1.7; }
+.travel-gallery-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+.travel-photo { overflow:hidden; border-radius:22px; background:#eef8fa; border:1px solid #d9e8eb; color:#18283e; text-decoration:none; }
+.travel-photo img { width:100%; height:230px; object-fit:cover; transition:transform .3s; }
+.travel-photo:hover img { transform:scale(1.04); }
+.travel-photo>span { display:flex; justify-content:space-between; padding:18px 22px; font-weight:700; }
+.travel-photo--brand img { object-position:right center; }
+.reviews-swiper { padding:4px 2px 18px; --swiper-theme-color:#087f8c; }
+.reviews-swiper .swiper-slide { height:auto; box-sizing:border-box; }
+.media-review { padding:28px; border:1px solid #d9e8eb; border-radius:22px; background:white; display:flex; flex-direction:column; }
+.media-review blockquote { flex:1; font-size:1.05rem; line-height:1.8; margin:20px 0 28px; }
+.media-controls { display:flex; align-items:center; justify-content:center; gap:16px; margin:20px 0; flex-wrap:wrap; }
+.media-arrow,.media-pause { border:1px solid #c5dadd; background:white; color:#18283e; border-radius:999px; min-height:44px; padding:10px 18px; font-weight:700; }
+.media-arrow:hover,.media-pause:hover { background:#dff7f5; }
+.reviews-pagination { width:auto!important; --swiper-theme-color:#087f8c; }
+.reviews-pagination .swiper-pagination-bullet { width:12px; height:12px; margin:0 6px; }
+.travel-photo:focus-visible,.media-controls button:focus-visible { outline:3px solid #087f8c; outline-offset:4px; }
+/* Keep the section readable when a CDN resource is unavailable. */
+.reviews-swiper:not(.swiper-initialized) .swiper-wrapper { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+@media(max-width:1023px) { .travel-gallery-grid,.reviews-swiper:not(.swiper-initialized) .swiper-wrapper { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:767px) { .travel-gallery-grid,.reviews-swiper:not(.swiper-initialized) .swiper-wrapper { grid-template-columns:1fr; } .travel-gallery { padding:56px 0; } .media-container { padding:0 16px; } .media-review { padding:24px; } .reviews-pause { flex-basis:60%; } }
+@media(prefers-reduced-motion:reduce) { .travel-photo img { transition:none; } }
