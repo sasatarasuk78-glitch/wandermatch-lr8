@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/widget.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Перейти до основного вмісту</a>
@@ -46,6 +47,7 @@
                   <a class="block rounded-lg px-3 py-2 transition hover:bg-cyan-50 hover:text-teal-700" href="#destinations">Популярні напрямки</a>
                   <a class="block rounded-lg px-3 py-2 transition hover:bg-cyan-50 hover:text-teal-700" href="#explore">Відео, карта й погода</a>
                   <a class="block rounded-lg px-3 py-2 transition hover:bg-cyan-50 hover:text-teal-700" href="#start">Підібрати маршрут</a>
+                  <a class="block rounded-lg px-3 py-2 transition hover:bg-cyan-50 hover:text-teal-700" href="#trip-budget">Розрахувати бюджет</a>
                 </div>
               </details>
             </li>
@@ -282,6 +284,36 @@
         </div>
       </section>
 
+
+<section id="trip-budget" class="trip-widget bg-[#eef8fa] py-16 sm:py-20" data-trip-widget aria-labelledby="trip-title">
+  <div class="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+    <p class="eyebrow">Плануй свій бюджет</p>
+    <h2 id="trip-title" class="mt-3 text-3xl font-extrabold tracking-tight sm:text-5xl">Скільки коштуватиме подорож?</h2>
+    <p class="mt-5 max-w-2xl leading-7 text-slate-600">Обери напрямок і формат відпочинку — отримай орієнтовний бюджет для всієї компанії.</p>
+    <div class="mt-8 grid gap-6 lg:grid-cols-2">
+      <form class="rounded-3xl border border-[#d9e8eb] bg-white p-6 sm:p-8" novalidate>
+        <div><label for="trip-destination">Напрямок</label><select id="trip-destination" name="destination" aria-describedby="trip-error-destination"><option value="kyoto">Кіото, Японія</option><option value="lisbon" selected>Лісабон, Португалія</option><option value="bali">Балі, Індонезія</option><option value="dolomites">Доломіти, Італія</option><option value="reykjavik">Рейк’явік, Ісландія</option><option value="marrakech">Мараккеш, Марокко</option></select><p id="trip-error-destination" class="trip-error" data-error="destination"></p></div>
+        <div class="mt-3 grid gap-4 sm:grid-cols-2">
+          <div><label for="trip-days">Тривалість, днів</label><input id="trip-days" name="days" type="number" min="1" max="30" step="1" value="5" required inputmode="numeric" aria-describedby="trip-hint-days trip-error-days"/><p id="trip-hint-days" class="mt-2 text-xs text-slate-500">Від 1 до 30 цілих днів.</p><p id="trip-error-days" class="trip-error" data-error="days"></p></div>
+          <div><label for="trip-people">Мандрівники</label><input id="trip-people" name="people" type="number" min="1" max="10" step="1" value="2" required inputmode="numeric" aria-describedby="trip-hint-people trip-error-people"/><p id="trip-hint-people" class="mt-2 text-xs text-slate-500">Від 1 до 10 осіб.</p><p id="trip-error-people" class="trip-error" data-error="people"></p></div>
+        </div>
+        <div class="mt-3"><label for="trip-level">Рівень проживання</label><select id="trip-level" name="level" aria-describedby="trip-error-level"><option value="budget">Бюджетний · ×1</option><option value="standard" selected>Стандартний · ×1,5</option><option value="comfort">Комфортний · ×2</option></select><p id="trip-error-level" class="trip-error" data-error="level"></p></div>
+        <label class="trip-extra mt-5" for="trip-excursions"><input id="trip-excursions" name="excursions" type="checkbox" aria-describedby="trip-error-excursions"/>Екскурсії · 45 € за людину</label><p id="trip-error-excursions" class="trip-error" data-error="excursions"></p>
+        <button type="reset" class="mt-5 min-h-12 rounded-full border border-[#b8ced3] px-6 font-bold hover:bg-cyan-50">Скинути параметри</button>
+        <noscript><p>Для розрахунку увімкни JavaScript у браузері.</p></noscript>
+      </form>
+      <div class="trip-result rounded-3xl border border-[#d9e8eb] bg-white p-6 sm:p-8" aria-live="polite" aria-atomic="true">
+        <p class="text-sm font-bold uppercase tracking-widest text-teal-700">Орієнтовна вартість</p><output data-result="total" aria-label="Загальна вартість">—</output>
+        <p class="leading-7 text-slate-600" data-result="summary">Обери параметри для розрахунку.</p>
+        <dl class="mt-5"><div><dt>Проживання</dt><dd data-result="accommodation">—</dd></div><div><dt>Харчування</dt><dd data-result="food">—</dd></div><div><dt>Місцевий транспорт</dt><dd data-result="transport">—</dd></div><div><dt>Екскурсії</dt><dd data-result="excursions">—</dd></div><div><dt>На одну людину</dt><dd data-result="perPerson">—</dd></div></dl>
+        <p class="mt-5 text-sm leading-6 text-slate-600" data-widget-status role="status"></p>
+        <p class="mt-4 rounded-2xl bg-cyan-50 p-4 text-sm leading-6">Навчальний розрахунок за умовними тарифами. Це не пропозиція бронювання. Авіаквитки, страхування та візи не включено.</p>
+      </div>
+    </div>
+    <details class="trip-rules mt-6 rounded-2xl border border-[#d9e8eb] bg-white px-5 py-2"><summary>Як розраховується бюджет?</summary><p class="mb-4 text-sm leading-7">Ночей = днів − 1. Кількість двомісних номерів = кількість людей / 2 з округленням вгору. Проживання = ночі × номери × тариф × рівень. Харчування = дні × люди × денний тариф. Транспорт та екскурсії враховуються за людину на всю поїздку. Підсумок = сума чотирьох складових.</p><div class="trip-table-wrap"><table><caption class="mb-3 text-left font-bold">Умовні базові тарифи в євро</caption><thead><tr><th scope="col">Напрямок</th><th scope="col">Номер / ніч</th><th scope="col">Їжа / день / особа</th><th scope="col">Транспорт / особа</th></tr></thead><tbody><tr><td>Кіото</td><td>90</td><td>35</td><td>70</td></tr><tr><td>Лісабон</td><td>70</td><td>25</td><td>40</td></tr><tr><td>Балі</td><td>50</td><td>20</td><td>50</td></tr><tr><td>Доломіти</td><td>100</td><td>35</td><td>80</td></tr><tr><td>Рейк’явік</td><td>120</td><td>45</td><td>90</td></tr><tr><td>Мараккеш</td><td>60</td><td>20</td><td>40</td></tr></tbody></table></div><p class="py-3 text-sm">Проживання: бюджетний ×1, стандартний ×1,5, комфортний ×2. Екскурсії: +45 € / особа.</p></details>
+  </div>
+</section>
+
 <section class="travel-gallery" id="travel-gallery" aria-labelledby="gallery-title"><div class="media-container"><p class="eyebrow">Місця, що надихають</p><h2 id="gallery-title">Побач подорож ближче</h2><p class="gallery-intro">Відкрий фото, збільшуй деталі та гортай напрямки у спільній галереї.</p><div class="travel-gallery-grid"><a class="travel-photo" href="assets/images/gallery/kyoto.jpg" data-fancybox="destinations" data-caption="Храми й традиційні вулиці Кіото"><img src="assets/images/gallery/kyoto.jpg" alt="Храми й традиційні вулиці Кіото" loading="lazy" width="1200" height="800"/><span>Кіото <span aria-hidden="true">↗</span></span></a>
 <a class="travel-photo" href="assets/images/gallery/lisbon.jpg" data-fancybox="destinations" data-caption="Кольорові квартали Лісабона"><img src="assets/images/gallery/lisbon.jpg" alt="Кольорові квартали Лісабона" loading="lazy" width="1200" height="800"/><span>Лісабон <span aria-hidden="true">↗</span></span></a>
 <a class="travel-photo" href="assets/images/gallery/bali.jpg" data-fancybox="destinations" data-caption="Тропічна природа Балі"><img src="assets/images/gallery/bali.jpg" alt="Тропічна природа Балі" loading="lazy" width="1200" height="800"/><span>Балі <span aria-hidden="true">↗</span></span></a>
@@ -395,6 +427,7 @@
           <h2 class="mb-1 text-base font-bold leading-tight text-white">Плануй подорож</h2>
           <a class="transition hover:text-teal-300" href="#destinations">Популярні напрямки</a>
           <a class="transition hover:text-teal-300" href="#explore">Відео, карта й погода</a>
+          <a class="transition hover:text-teal-300" href="#trip-budget">Калькулятор бюджету</a>
           <a class="transition hover:text-teal-300" href="#how-it-works">Як це працює</a>
           <a class="transition hover:text-teal-300" href="#start">Підібрати маршрут</a>
           <a class="transition hover:text-teal-300" href="#contact">Зворотний зв’язок</a>
@@ -438,6 +471,7 @@
     <script src="js/media.js"></script>
     <script src="js/main.js"></script>
     <script src="js/validation.js"></script>
+    <script src="js/widget.js"></script>
   </body>
 </html>
 
