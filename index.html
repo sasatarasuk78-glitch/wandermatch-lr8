@@ -15,7 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Перейти до основного вмісту</a>
@@ -279,6 +282,11 @@
         </div>
       </section>
 
+<section class="travel-gallery" id="travel-gallery" aria-labelledby="gallery-title"><div class="media-container"><p class="eyebrow">Місця, що надихають</p><h2 id="gallery-title">Побач подорож ближче</h2><p class="gallery-intro">Відкрий фото, збільшуй деталі та гортай напрямки у спільній галереї.</p><div class="travel-gallery-grid"><a class="travel-photo" href="assets/images/gallery/kyoto.jpg" data-fancybox="destinations" data-caption="Храми й традиційні вулиці Кіото"><img src="assets/images/gallery/kyoto.jpg" alt="Храми й традиційні вулиці Кіото" loading="lazy" width="1200" height="800"/><span>Кіото <span aria-hidden="true">↗</span></span></a>
+<a class="travel-photo" href="assets/images/gallery/lisbon.jpg" data-fancybox="destinations" data-caption="Кольорові квартали Лісабона"><img src="assets/images/gallery/lisbon.jpg" alt="Кольорові квартали Лісабона" loading="lazy" width="1200" height="800"/><span>Лісабон <span aria-hidden="true">↗</span></span></a>
+<a class="travel-photo" href="assets/images/gallery/bali.jpg" data-fancybox="destinations" data-caption="Тропічна природа Балі"><img src="assets/images/gallery/bali.jpg" alt="Тропічна природа Балі" loading="lazy" width="1200" height="800"/><span>Балі <span aria-hidden="true">↗</span></span></a>
+<a class="travel-photo" href="assets/images/gallery/dolomites.jpg" data-fancybox="destinations" data-caption="Гірські краєвиди Доломітів"><img src="assets/images/gallery/dolomites.jpg" alt="Гірські краєвиди Доломітів" loading="lazy" width="1200" height="800"/><span>Доломіти <span aria-hidden="true">↗</span></span></a>
+<a class="travel-photo" href="assets/images/gallery/iceland.jpg" data-fancybox="destinations" data-caption="Природа Ісландії — ідея для поїздки з Рейк’явіка"><img src="assets/images/gallery/iceland.jpg" alt="Природа Ісландії — ідея для поїздки з Рейк’явіка" loading="lazy" width="1200" height="800"/><span>Ісландія <span aria-hidden="true">↗</span></span></a><a class="travel-photo" href="assets/images/gallery/marrakech.jpg" data-fancybox="destinations" data-caption="Мараккеш, Марокко — міська площа на заході сонця"><img src="assets/images/gallery/marrakech.jpg" alt="Площа та міські будівлі Мараккеша на заході сонця, Марокко" loading="lazy" width="1200" height="800"/><span>Мараккеш · Марокко <span aria-hidden="true">↗</span></span></a></div></div></section>
       <section class="testimonials bg-[#f5fbfc] py-[clamp(4.5rem,8vw,7.5rem)]" id="testimonials" aria-labelledby="testimonials-title">
         <div class="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
           <div class="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -288,19 +296,19 @@
             </div>
             <p class="max-w-[19rem] text-slate-600">Знайди напрямок, який відповідає твоєму способу подорожувати.</p>
           </div>
-          <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
-            <article class="rounded-[1.25rem] border border-[#d9e8eb] bg-white p-6 shadow-[0_8px_28px_rgba(24,61,120,0.06)] sm:p-9">
-              <h3 class="sr-only">Відгук Марії К.</h3>
-              <div class="quote-card__stars" role="img" aria-label="5 із 5 зірок">★★★★★</div>
-              <blockquote>«Я шукала поїздку з локальною кухнею та неквапливими прогулянками. Лісабон виявився саме тим, чого хотілося».</blockquote>
-              <div class="quote-card__author"><span class="avatar avatar--one" aria-hidden="true">М</span><span><strong>Марія К.</strong><small>Мандрівниця, любить гастротури</small></span></div>
-            </article>
-            <article class="rounded-[1.25rem] border border-[#d9e8eb] bg-white p-6 shadow-[0_8px_28px_rgba(24,61,120,0.06)] sm:p-9">
-              <h3 class="sr-only">Відгук Андрія П.</h3>
-              <div class="quote-card__stars" role="img" aria-label="5 із 5 зірок">★★★★★</div>
-              <blockquote>«360°-перегляд допоміг уявити місце до бронювання. Тепер я знаю, чого очікувати від своєї наступної пригоди».</blockquote>
-              <div class="quote-card__author"><span class="avatar avatar--two" aria-hidden="true">А</span><span><strong>Андрій П.</strong><small>Мандрівник, шукає пригоди</small></span></div>
-            </article>
+          <div class="swiper reviews-swiper" aria-label="Відгуки мандрівників">
+            <div class="swiper-wrapper"><article class="swiper-slide quote-card media-review"><h3 class="sr-only">Відгук: Марія К.</h3><div class="quote-card__stars" role="img" aria-label="5 із 5 зірок">★★★★★</div><blockquote>«Я шукала поїздку з локальною кухнею та неквапливими прогулянками. Лісабон виявився саме тим, чого хотілося.»</blockquote><div class="quote-card__author"><span class="avatar avatar--one" aria-hidden="true">М</span><span><strong>Марія К.</strong><small>Лісабон · гастрономія</small></span></div></article>
+<article class="swiper-slide quote-card media-review"><h3 class="sr-only">Відгук: Андрій П.</h3><div class="quote-card__stars" role="img" aria-label="5 із 5 зірок">★★★★★</div><blockquote>«Карта та прогноз погоди допомогли спланувати день у горах і вибрати зручний час для прогулянки.»</blockquote><div class="quote-card__author"><span class="avatar avatar--one" aria-hidden="true">А</span><span><strong>Андрій П.</strong><small>Доломіти · активний відпочинок</small></span></div></article>
+<article class="swiper-slide quote-card media-review"><h3 class="sr-only">Відгук: Олена С.</h3><div class="quote-card__stars" role="img" aria-label="5 із 5 зірок">★★★★★</div><blockquote>«Фото храмів і відеоогляд допомогли відчути атмосферу Кіото та скласти список місць для відвідування.»</blockquote><div class="quote-card__author"><span class="avatar avatar--one" aria-hidden="true">О</span><span><strong>Олена С.</strong><small>Кіото · культура</small></span></div></article>
+<article class="swiper-slide quote-card media-review"><h3 class="sr-only">Відгук: Дмитро В.</h3><div class="quote-card__stars" role="img" aria-label="5 із 5 зірок">★★★★★</div><blockquote>«Зручно порівнювати напрямки в одному місці. Для спокійної подорожі я обрав зелені пагорби та узбережжя Балі.»</blockquote><div class="quote-card__author"><span class="avatar avatar--one" aria-hidden="true">Д</span><span><strong>Дмитро В.</strong><small>Балі · природа</small></span></div></article>
+<article class="swiper-slide quote-card media-review"><h3 class="sr-only">Відгук: Ірина М.</h3><div class="quote-card__stars" role="img" aria-label="5 із 5 зірок">★★★★★</div><blockquote>«Перед поїздкою до Ісландії переглянула карту та погоду. Тепер краще розумію, які речі потрібно взяти.»</blockquote><div class="quote-card__author"><span class="avatar avatar--one" aria-hidden="true">І</span><span><strong>Ірина М.</strong><small>Рейк’явік · нові враження</small></span></div></article>
+<article class="swiper-slide quote-card media-review"><h3 class="sr-only">Відгук: Максим Л.</h3><div class="quote-card__stars" role="img" aria-label="5 із 5 зірок">★★★★★</div><blockquote>«Мені сподобалося досліджувати місто ще до поїздки. Галерея надихає, а карта допомагає зорієнтуватися.»</blockquote><div class="quote-card__author"><span class="avatar avatar--one" aria-hidden="true">М</span><span><strong>Максим Л.</strong><small>Лісабон · міська подорож</small></span></div></article></div>
+          </div>
+          <div class="media-controls">
+            <button class="reviews-prev media-arrow" type="button" aria-label="Попередній відгук">←</button>
+            <div class="reviews-pagination"></div>
+            <button class="reviews-next media-arrow" type="button" aria-label="Наступний відгук">→</button>
+            <button class="reviews-pause media-pause" type="button" aria-pressed="false">Призупинити</button>
           </div>
           <p class="demo-note">Приклади відгуків для навчального макета.</p>
         </div>
@@ -425,7 +433,11 @@
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.js"></script>
+    <script src="js/media.js"></script>
     <script src="js/main.js"></script>
     <script src="js/validation.js"></script>
   </body>
 </html>
+
