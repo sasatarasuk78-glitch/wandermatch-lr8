@@ -85,8 +85,20 @@
     form.addEventListener('input', update);
     form.addEventListener('change', update);
     form.addEventListener('submit', event => event.preventDefault());
-    // Run after the browser has applied the form's native default values.
-    form.addEventListener('reset', () => setTimeout(update, 0));
+    // Reset means a fresh, empty estimate rather than the demo defaults.
+    form.addEventListener('reset', event => {
+      event.preventDefault();
+      for (const name of names) {
+        if (name === 'excursions') fields[name].checked = false;
+        else fields[name].value = '';
+        fields[name].setAttribute('aria-invalid', 'false');
+        fields[name].classList.toggle('border-red-600', false);
+        errors[name].textContent = '';
+      }
+      for (const name of outputs) slots[name].textContent = name === 'summary'
+        ? 'Обери параметри для нового розрахунку.' : '—';
+      status.textContent = 'Параметри очищено. Заповни поля для розрахунку.';
+    });
     update();
     return true;
   }
