@@ -12,3 +12,8 @@ for(const name of fs.readdirSync(path.join(root,'css'))){
  for(const m of css.matchAll(/url\(["']?(\.\.[^)'"\s]+)["']?\)/g))if(!fs.existsSync(path.join(root,'css',m[1])))throw Error(`Missing CSS resource: ${m[1]}`);
 }
 console.log('PASS: JS syntax, local resources, production CSS, heading');
+for(const m of html.matchAll(/<script[^>]*src="([^"]+)"[^>]*integrity="sha384-([^"]+)"/g)){
+ const actual=require('node:crypto').createHash('sha384').update(fs.readFileSync(path.join(root,m[1]))).digest('base64');
+ if(actual!==m[2])throw Error(`Script integrity mismatch: ${m[1]}`);
+}
+console.log('PASS: self-hosted media script integrity');
