@@ -7,16 +7,21 @@
       name="description"
       content="Знайдіть напрямок, який пасує вашому стилю подорожей, і дослідіть його у 360° ще до поїздки."
     />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://wandermatch-lr8.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="uk_UA" />
+    <meta property="og:title" content="WanderMatch — подорож, що пасує саме вам" />
+    <meta property="og:description" content="Знаходь напрямки, переглядай фото й відео та розраховуй орієнтовний бюджет подорожі." />
+    <meta property="og:url" content="https://wandermatch-lr8.vercel.app/" />
+    <meta property="og:image" content="https://wandermatch-lr8.vercel.app/assets/images/hero-bg.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preload" href="assets/images/hero-bg.webp" as="image" fetchpriority="high" />
     <title>WanderMatch — подорож, що пасує саме вам</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <link rel="stylesheet" href="assets/vendor/swiper.min.css" />
+    <link rel="stylesheet" href="assets/vendor/fancybox.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/media.css" />
     <link rel="stylesheet" href="css/widget.css" />
@@ -28,7 +33,7 @@
       <div class="mx-auto flex min-h-[5.5rem] w-full max-w-[1200px] items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <a class="brand flex shrink-0 items-center gap-2" href="#top" aria-label="WanderMatch — на головну">
           <span class="brand__mark" aria-hidden="true">
-            <img src="assets/images/wander-match-logo.jpg" alt="" />
+            <img src="assets/images/wander-match-logo.webp" width="1600" height="1600" alt="" />
           </span>
           <span class="brand__name">Wander<span>Match</span></span>
         </a>
@@ -183,7 +188,7 @@
                 <p class="mb-0 max-w-2xl text-slate-600" id="destination-video-description">Храми, традиційні квартали та знакові місця міста у відеоогляді.</p>
               </div>
               <div class="relative aspect-video overflow-hidden rounded-xl bg-[#102b59]" id="destination-video-preview">
-                <img class="h-full w-full object-cover" id="destination-video-thumbnail" src="https://i.ytimg.com/vi/Jd1wzlwtKJ0/maxresdefault.jpg" alt="Обкладинка відеопутівника про Кіото" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+                <img class="h-full w-full object-cover" width="1280" height="720" id="destination-video-thumbnail" src="https://i.ytimg.com/vi/Jd1wzlwtKJ0/maxresdefault.jpg" alt="Обкладинка відеопутівника про Кіото" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
                 <span class="absolute inset-0 bg-[#0d2037]/20" aria-hidden="true"></span>
                 <button class="absolute inset-0 grid w-full place-items-center focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-[-4px] focus-visible:outline-teal-300" id="destination-video-play" type="button" aria-label="Відтворити відео про Кіото">
                   <span class="grid h-16 w-20 place-items-center rounded-2xl bg-[#ff0033] text-white shadow-xl transition group-hover:scale-110">
@@ -314,11 +319,11 @@
   </div>
 </section>
 
-<section class="travel-gallery" id="travel-gallery" aria-labelledby="gallery-title"><div class="media-container"><p class="eyebrow">Місця, що надихають</p><h2 id="gallery-title">Побач подорож ближче</h2><p class="gallery-intro">Відкрий фото, збільшуй деталі та гортай напрямки у спільній галереї.</p><div class="travel-gallery-grid"><a class="travel-photo" href="assets/images/gallery/kyoto.jpg" data-fancybox="destinations" data-caption="Храми й традиційні вулиці Кіото"><img src="assets/images/gallery/kyoto.jpg" alt="Храми й традиційні вулиці Кіото" loading="lazy" width="1200" height="800"/><span>Кіото <span aria-hidden="true">↗</span></span></a>
-<a class="travel-photo" href="assets/images/gallery/lisbon.jpg" data-fancybox="destinations" data-caption="Кольорові квартали Лісабона"><img src="assets/images/gallery/lisbon.jpg" alt="Кольорові квартали Лісабона" loading="lazy" width="1200" height="800"/><span>Лісабон <span aria-hidden="true">↗</span></span></a>
-<a class="travel-photo" href="assets/images/gallery/bali.jpg" data-fancybox="destinations" data-caption="Тропічна природа Балі"><img src="assets/images/gallery/bali.jpg" alt="Тропічна природа Балі" loading="lazy" width="1200" height="800"/><span>Балі <span aria-hidden="true">↗</span></span></a>
-<a class="travel-photo" href="assets/images/gallery/dolomites.jpg" data-fancybox="destinations" data-caption="Гірські краєвиди Доломітів"><img src="assets/images/gallery/dolomites.jpg" alt="Гірські краєвиди Доломітів" loading="lazy" width="1200" height="800"/><span>Доломіти <span aria-hidden="true">↗</span></span></a>
-<a class="travel-photo" href="assets/images/gallery/iceland.jpg" data-fancybox="destinations" data-caption="Природа Ісландії — ідея для поїздки з Рейк’явіка"><img src="assets/images/gallery/iceland.jpg" alt="Природа Ісландії — ідея для поїздки з Рейк’явіка" loading="lazy" width="1200" height="800"/><span>Ісландія <span aria-hidden="true">↗</span></span></a><a class="travel-photo" href="assets/images/gallery/marrakech.jpg" data-fancybox="destinations" data-caption="Мараккеш, Марокко — міська площа на заході сонця"><img src="assets/images/gallery/marrakech.jpg" alt="Площа та міські будівлі Мараккеша на заході сонця, Марокко" loading="lazy" width="1200" height="800"/><span>Мараккеш · Марокко <span aria-hidden="true">↗</span></span></a></div></div></section>
+<section class="travel-gallery" id="travel-gallery" aria-labelledby="gallery-title"><div class="media-container"><p class="eyebrow">Місця, що надихають</p><h2 id="gallery-title">Побач подорож ближче</h2><p class="gallery-intro">Відкрий фото, збільшуй деталі та гортай напрямки у спільній галереї.</p><div class="travel-gallery-grid"><a class="travel-photo" href="assets/images/gallery/kyoto.webp" data-fancybox="destinations" data-caption="Храми й традиційні вулиці Кіото"><img src="assets/images/gallery/kyoto.webp" alt="Храми й традиційні вулиці Кіото" loading="lazy" width="1200" height="800"/><span>Кіото <span aria-hidden="true">↗</span></span></a>
+<a class="travel-photo" href="assets/images/gallery/lisbon.webp" data-fancybox="destinations" data-caption="Кольорові квартали Лісабона"><img src="assets/images/gallery/lisbon.webp" alt="Кольорові квартали Лісабона" loading="lazy" width="1200" height="800"/><span>Лісабон <span aria-hidden="true">↗</span></span></a>
+<a class="travel-photo" href="assets/images/gallery/bali.webp" data-fancybox="destinations" data-caption="Тропічна природа Балі"><img src="assets/images/gallery/bali.webp" alt="Тропічна природа Балі" loading="lazy" width="1200" height="800"/><span>Балі <span aria-hidden="true">↗</span></span></a>
+<a class="travel-photo" href="assets/images/gallery/dolomites.webp" data-fancybox="destinations" data-caption="Гірські краєвиди Доломітів"><img src="assets/images/gallery/dolomites.webp" alt="Гірські краєвиди Доломітів" loading="lazy" width="1200" height="800"/><span>Доломіти <span aria-hidden="true">↗</span></span></a>
+<a class="travel-photo" href="assets/images/gallery/iceland.webp" data-fancybox="destinations" data-caption="Природа Ісландії — ідея для поїздки з Рейк’явіка"><img src="assets/images/gallery/iceland.webp" alt="Природа Ісландії — ідея для поїздки з Рейк’явіка" loading="lazy" width="1200" height="800"/><span>Ісландія <span aria-hidden="true">↗</span></span></a><a class="travel-photo" href="assets/images/gallery/marrakech.webp" data-fancybox="destinations" data-caption="Мараккеш, Марокко — міська площа на заході сонця"><img src="assets/images/gallery/marrakech.webp" alt="Площа та міські будівлі Мараккеша на заході сонця, Марокко" loading="lazy" width="1200" height="800"/><span>Мараккеш · Марокко <span aria-hidden="true">↗</span></span></a></div></div></section>
       <section class="testimonials bg-[#f5fbfc] py-[clamp(4.5rem,8vw,7.5rem)]" id="testimonials" aria-labelledby="testimonials-title">
         <div class="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
           <div class="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -406,7 +411,7 @@
         <section aria-labelledby="footer-brand-title">
           <h2 class="sr-only" id="footer-brand-title">WanderMatch</h2>
           <a class="brand brand--footer flex items-center gap-2" href="#top" aria-label="WanderMatch — на початок сторінки">
-            <span class="brand__mark" aria-hidden="true"><img src="assets/images/wander-match-logo.jpg" alt="" /></span>
+            <span class="brand__mark" aria-hidden="true"><img src="assets/images/wander-match-logo.webp" width="1600" height="1600" alt="" /></span>
             <span class="brand__name">Wander<span>Match</span></span>
           </a>
           <p class="mt-4 max-w-xs text-sm leading-6 text-slate-300">Знаходь напрямки, які пасують твоєму стилю, бюджету й ритму подорожі.</p>
@@ -466,12 +471,12 @@
       </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.js"></script>
-    <script src="js/media.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/validation.js"></script>
-    <script src="js/widget.js"></script>
+    <script defer src="assets/vendor/swiper.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav"></script>
+    <script defer src="assets/vendor/fancybox.umd.js" integrity="sha384-BodKYo5iRmFaqEaP1o8AAu9hCHqLvNhSWEg12QF1IjPnl1SgsrwQMSMKUB4POJ18"></script>
+    <script defer src="js/media.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/validation.js"></script>
+    <script defer src="js/widget.js"></script>
   </body>
 </html>
 

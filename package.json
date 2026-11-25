@@ -1,0 +1,11 @@
+{
+  "name": "wandermatch",
+  "version": "12.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node scripts/check.cjs && node --test tests/*.test.cjs",
+    "build:css": "tailwindcss -i css/input.css -o css/tailwind.css --minify",
+    "build": "tailwindcss -i css/input.css -o css/tailwind.css --minify && node scripts/build.cjs"
+  },
+  "devDependencies": { "tailwindcss": "3.4.17" }
+}

@@ -9,3 +9,7 @@ desktop.ini
 # Temporary output
 *.log
 *.tmp
+node_modules/
+dist/
+.vercel/
+.env*
