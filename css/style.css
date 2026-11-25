@@ -35,6 +35,13 @@
   --transition: 180ms ease;
 }
 
+/* Audit fixes: readable small labels and touch-friendly navigation. */
+.step-card__number, .benefit-card__index { color: #516174 !important; }
+#menu-toggle, .primary-nav a, .primary-nav summary { min-height: 48px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
 *,
 *::before,
 *::after {
@@ -156,7 +163,7 @@ body h3 {
   overflow: hidden;
   padding: 8rem 0 5.5rem;
   background-color: var(--color-sky);
-  background-image: linear-gradient(90deg, rgba(232, 248, 251, 0.99) 0%, rgba(232, 248, 251, 0.97) 42%, rgba(232, 248, 251, 0.84) 58%, rgba(232, 248, 251, 0.42) 72%, rgba(232, 248, 251, 0.04) 86%), url("../assets/images/hero-bg.png");
+  background-image: linear-gradient(90deg, rgba(232, 248, 251, 0.99) 0%, rgba(232, 248, 251, 0.97) 42%, rgba(232, 248, 251, 0.84) 58%, rgba(232, 248, 251, 0.42) 72%, rgba(232, 248, 251, 0.04) 86%), url("../assets/images/hero-bg.webp");
   background-position: center, right center;
   background-repeat: no-repeat;
   background-size: cover, auto 100%;
@@ -282,7 +289,7 @@ body h3 {
   margin: 1.5rem 0 1.4rem;
   border-radius: 1.1rem;
   background-color: var(--color-surface);
-  background-image: url("../assets/images/icons-set.jpg");
+  background-image: url("../assets/images/icons-set.webp");
   background-repeat: no-repeat;
   background-size: 420% auto;
   box-shadow: 0 0 0 1px var(--color-border);
@@ -383,7 +390,7 @@ body h3 {
     min-height: 45rem;
     align-items: start;
     padding: 8rem 0 4.5rem;
-    background-image: linear-gradient(180deg, rgba(232, 248, 251, 0.98) 0%, rgba(232, 248, 251, 0.94) 48%, rgba(232, 248, 251, 0.1) 100%), url("../assets/images/hero-bg.png");
+    background-image: linear-gradient(180deg, rgba(232, 248, 251, 0.98) 0%, rgba(232, 248, 251, 0.94) 48%, rgba(232, 248, 251, 0.1) 100%), url("../assets/images/hero-bg.webp");
     background-position: center, 68% bottom;
     background-size: cover, auto 62%;
   }
